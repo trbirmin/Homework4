@@ -2,7 +2,7 @@ name: Workflow1
 on: push
 jobs:
   Test and Lints:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Download project code
         uses: actions/checkout@v3
