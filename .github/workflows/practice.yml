@@ -13,10 +13,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run lint
-        run: npm lint
+        run: npm run lint
       - name: Run test
-        run: npm test
+        run: npm run test
       - name: run build
-        run: npm build
+        run: npm run build
       - name: output message
         run: echo "Workflow Running"
