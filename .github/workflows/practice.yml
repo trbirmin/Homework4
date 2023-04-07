@@ -1,7 +1,7 @@
 name: Workflow1
 on: push
 jobs:
-  Test and Lints:
+  TestandLints:
     runs-on: ubuntu-latest
     steps:
       - name: Download project code
