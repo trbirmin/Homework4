@@ -1,4 +1,4 @@
-name: Workflow1
+name: Workflow1.1
 on: push
 jobs:
   Lint:
@@ -30,6 +30,7 @@ jobs:
         run: npm run test
   Build:
     needs: Test
+    runs-on: ubuntu-latest
     steps:
       - name: Download project code
         uses: actions/checkout@v3
