@@ -1,0 +1,22 @@
+name: Workflow1
+on: push
+jobs:
+  Test and Lints:
+    run-on: ubuntu-latest
+    steps:
+      - name: Download project code
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Run lint
+        run: npm lint
+      - name: Run test
+        run: npm test
+      - name: run build
+        run: npm build
+      - name: output message
+        run: echo "Workflow Running"
